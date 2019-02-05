@@ -9,6 +9,10 @@ Provides a simple but complete Qt-based GUI for SUSEPrime >= 0.6
 >- Nvidia proprietary drivers: https://en.opensuse.org/SDB:NVIDIA_drivers
 >- bbswitch is strictly recommended
 
+## BUILD:
+>-qmake
+>-make
+
 ## USAGE:
 This app has same features of SUSEPrime like switch, service management, reset, boot preference and log viewing.
 You can read all information in "about" tab inside application that calls console "prime-select usage".
