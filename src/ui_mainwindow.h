@@ -90,13 +90,13 @@ public:
         if (MainWindow->objectName().isEmpty())
             MainWindow->setObjectName(QString::fromUtf8("MainWindow"));
         MainWindow->setWindowModality(Qt::NonModal);
-        MainWindow->resize(660, 556);
+        MainWindow->resize(660, 523);
         QSizePolicy sizePolicy(QSizePolicy::Expanding, QSizePolicy::Expanding);
         sizePolicy.setHorizontalStretch(0);
         sizePolicy.setVerticalStretch(0);
         sizePolicy.setHeightForWidth(MainWindow->sizePolicy().hasHeightForWidth());
         MainWindow->setSizePolicy(sizePolicy);
-        MainWindow->setMinimumSize(QSize(660, 500));
+        MainWindow->setMinimumSize(QSize(660, 520));
         MainWindow->setMaximumSize(QSize(99999, 99999));
         QIcon icon1;
         icon1.addFile(QString::fromUtf8(":/icon/icon/nvidia.png"), QSize(), QIcon::Normal, QIcon::Off);
@@ -263,34 +263,34 @@ public:
         apply_bootdefault->setLocale(QLocale(QLocale::English, QLocale::UnitedStates));
         radionvidia = new QRadioButton(groupBox_4);
         radionvidia->setObjectName(QString::fromUtf8("radionvidia"));
-        radionvidia->setGeometry(QRect(80, 30, 105, 22));
+        radionvidia->setGeometry(QRect(80, 30, 65, 22));
         sizePolicy2.setHeightForWidth(radionvidia->sizePolicy().hasHeightForWidth());
         radionvidia->setSizePolicy(sizePolicy2);
-        radionvidia->setMinimumSize(QSize(105, 22));
+        radionvidia->setMinimumSize(QSize(65, 22));
         radionvidia->setMaximumSize(QSize(105, 22));
         radionvidia->setLocale(QLocale(QLocale::English, QLocale::UnitedStates));
         radiointel2 = new QRadioButton(groupBox_4);
         radiointel2->setObjectName(QString::fromUtf8("radiointel2"));
-        radiointel2->setGeometry(QRect(10, 60, 105, 22));
+        radiointel2->setGeometry(QRect(10, 60, 60, 22));
         sizePolicy2.setHeightForWidth(radiointel2->sizePolicy().hasHeightForWidth());
         radiointel2->setSizePolicy(sizePolicy2);
-        radiointel2->setMinimumSize(QSize(105, 22));
+        radiointel2->setMinimumSize(QSize(60, 22));
         radiointel2->setMaximumSize(QSize(105, 22));
         radiointel2->setLocale(QLocale(QLocale::English, QLocale::UnitedStates));
         radiolast = new QRadioButton(groupBox_4);
         radiolast->setObjectName(QString::fromUtf8("radiolast"));
-        radiolast->setGeometry(QRect(80, 60, 105, 22));
+        radiolast->setGeometry(QRect(80, 60, 65, 22));
         sizePolicy2.setHeightForWidth(radiolast->sizePolicy().hasHeightForWidth());
         radiolast->setSizePolicy(sizePolicy2);
-        radiolast->setMinimumSize(QSize(105, 22));
+        radiolast->setMinimumSize(QSize(65, 22));
         radiolast->setMaximumSize(QSize(105, 22));
         radiolast->setLocale(QLocale(QLocale::English, QLocale::UnitedStates));
         radiointel = new QRadioButton(groupBox_4);
         radiointel->setObjectName(QString::fromUtf8("radiointel"));
-        radiointel->setGeometry(QRect(10, 30, 105, 22));
+        radiointel->setGeometry(QRect(10, 30, 60, 22));
         sizePolicy2.setHeightForWidth(radiointel->sizePolicy().hasHeightForWidth());
         radiointel->setSizePolicy(sizePolicy2);
-        radiointel->setMinimumSize(QSize(105, 22));
+        radiointel->setMinimumSize(QSize(60, 22));
         radiointel->setMaximumSize(QSize(105, 22));
         radiointel->setLocale(QLocale(QLocale::English, QLocale::UnitedStates));
 
@@ -528,7 +528,7 @@ public:
 
         retranslateUi(MainWindow);
 
-        tabWidget->setCurrentIndex(2);
+        tabWidget->setCurrentIndex(0);
 
 
         QMetaObject::connectSlotsByName(MainWindow);
