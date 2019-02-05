@@ -10,8 +10,7 @@ Provides a simple but complete Qt-based GUI for SUSEPrime >= 0.6
 >- bbswitch is strictly recommended
 
 ## BUILD:
->-qmake
->-make
+> qmake && make
 
 ## USAGE:
 This app has same features of SUSEPrime like switch, service management, reset, boot preference and log viewing.
