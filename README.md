@@ -17,6 +17,11 @@ This app has same features of SUSEPrime like switch, service management, reset, 
 You can read all information in "about" tab inside application that calls console "prime-select usage".
 SUSEPrimeQt could work without root only for user-available features of SUSEPrime, execute it as root to prevent annoying password-ask dialogs.
 
+## SCREENSHOTS:
+![Alt text](/Screenshots/screen1.jpeg?raw=true)
+![Alt text](/Screenshots/screen2.jpeg?raw=true)
+![Alt text](/Screenshots/about.jpeg?raw=true)
+
 ## CREDITS:
 Code by simopil <a href="https://github.com/simopil">github</a>
 
