@@ -122,7 +122,7 @@
        </attribute>
        <layout class="QGridLayout" name="gridLayout_4">
         <item row="0" column="0">
-         <widget class="QGroupBox" name="groupBox">
+         <widget class="QGroupBox" name="switch_widget">
           <property name="sizePolicy">
            <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
             <horstretch>0</horstretch>
@@ -252,7 +252,7 @@
          </widget>
         </item>
         <item row="0" column="1">
-         <widget class="QGroupBox" name="groupBox_2">
+         <widget class="QGroupBox" name="currentdriver_widget">
           <property name="sizePolicy">
            <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
             <horstretch>0</horstretch>
@@ -327,7 +327,7 @@
          </widget>
         </item>
         <item row="0" column="2">
-         <widget class="QGroupBox" name="groupBox_3">
+         <widget class="QGroupBox" name="bbswitch_widget">
           <property name="sizePolicy">
            <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
             <horstretch>0</horstretch>
@@ -399,7 +399,7 @@
             <set>Qt::AlignCenter</set>
            </property>
           </widget>
-          <widget class="QLabel" name="label_8">
+          <widget class="QLabel" name="bbs_label">
            <property name="geometry">
             <rect>
              <x>23</x>
@@ -438,6 +438,33 @@
             <string>[BBSWITCH]</string>
            </property>
           </widget>
+          <widget class="QLabel" name="bbswitch_notinst_label">
+           <property name="geometry">
+            <rect>
+             <x>10</x>
+             <y>25</y>
+             <width>101</width>
+             <height>91</height>
+            </rect>
+           </property>
+           <property name="font">
+            <font>
+             <pointsize>15</pointsize>
+            </font>
+           </property>
+           <property name="text">
+            <string>BBSWITCH IS NOT INSTALLED</string>
+           </property>
+           <property name="scaledContents">
+            <bool>false</bool>
+           </property>
+           <property name="alignment">
+            <set>Qt::AlignCenter</set>
+           </property>
+           <property name="wordWrap">
+            <bool>true</bool>
+           </property>
+          </widget>
          </widget>
         </item>
         <item row="0" column="3" rowspan="3">
@@ -463,7 +490,7 @@
          </widget>
         </item>
         <item row="1" column="0">
-         <widget class="QGroupBox" name="groupBox_4">
+         <widget class="QGroupBox" name="bootdef_widget">
           <property name="sizePolicy">
            <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
             <horstretch>0</horstretch>
@@ -655,7 +682,7 @@
          </widget>
         </item>
         <item row="1" column="1" colspan="2">
-         <widget class="QGroupBox" name="groupBox_5">
+         <widget class="QGroupBox" name="nextboot_widget">
           <property name="sizePolicy">
            <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
             <horstretch>0</horstretch>
@@ -830,7 +857,7 @@
          </widget>
         </item>
         <item row="2" column="0">
-         <widget class="QGroupBox" name="groupBox_6">
+         <widget class="QGroupBox" name="service_widget">
           <property name="sizePolicy">
            <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
             <horstretch>0</horstretch>
@@ -993,7 +1020,7 @@
          </widget>
         </item>
         <item row="2" column="1" colspan="2">
-         <widget class="QGroupBox" name="groupBox_7">
+         <widget class="QGroupBox" name="advanced_widget">
           <property name="sizePolicy">
            <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
             <horstretch>0</horstretch>
@@ -1269,54 +1296,6 @@
           </property>
           <property name="text">
            <string>SUPrivides GUI for suse-prime x, SUSEPrime version x needed</string>
-          </property>
-         </widget>
-        </item>
-        <item>
-         <widget class="QLabel" name="label_12">
-          <property name="sizePolicy">
-           <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
-            <horstretch>0</horstretch>
-            <verstretch>0</verstretch>
-           </sizepolicy>
-          </property>
-          <property name="minimumSize">
-           <size>
-            <width>575</width>
-            <height>24</height>
-           </size>
-          </property>
-          <property name="font">
-           <font>
-            <pointsize>13</pointsize>
-           </font>
-          </property>
-          <property name="text">
-           <string>- bbswitch also strictly recommended for managing nvidia power status</string>
-          </property>
-         </widget>
-        </item>
-        <item>
-         <widget class="QLabel" name="label_13">
-          <property name="sizePolicy">
-           <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
-            <horstretch>0</horstretch>
-            <verstretch>0</verstretch>
-           </sizepolicy>
-          </property>
-          <property name="minimumSize">
-           <size>
-            <width>575</width>
-            <height>24</height>
-           </size>
-          </property>
-          <property name="font">
-           <font>
-            <pointsize>10</pointsize>
-           </font>
-          </property>
-          <property name="text">
-           <string>* If intel2 driver seems do anything, it means that you haven't intel open source driver installed</string>
           </property>
          </widget>
         </item>
