@@ -11,8 +11,8 @@
 static QString SUSEPrimeqt_versionstring = "SUSEPrimeQt  0.6.1";
 static QString SUSEPrime_versionstring = "- Provides a simple GUI for SUSEPrime 0.6. Needs suse-prime >= 0.6";
 
-static bool intel2_exist;
-static bool bbswitch_exists;
+static bool intel2_exist = true;
+static bool bbswitch_exists = true;
 
 using namespace std;
 
