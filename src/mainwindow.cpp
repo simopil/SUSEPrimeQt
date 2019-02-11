@@ -38,6 +38,7 @@ void MainWindow::refresh()
         logfile.close();
         ui->logViewer->setLineWrapMode(QTextEdit::NoWrap);
         ui->logViewer->setText(log);
+        ui->logViewer->moveCursor(QTextCursor::End);
         ui->logcleaner_but->setEnabled(true);
     } else {
         ui->logViewer->setText("logfile /var/log/prime-select.log NOT exist! Probably cleaned by user");
@@ -71,9 +72,9 @@ void MainWindow::refresh()
         driver = current_drvstream.readAll();
         ui->driverStatus->setText(driver);
         QString currmsg = "driver already in use";
-        if( driver.contains("intel2", Qt::CaseSensitive) )      { ui->switchIntel2->setEnabled(false); ui->switchIntel2->setToolTip("intel2 driver already in use"); }
-        else if( driver.contains("intel", Qt::CaseSensitive) )  { ui->switchIntel->setEnabled(false); ui->switchIntel->setToolTip("intel driver already in use"); }
-        else if( driver.contains("nvidia", Qt::CaseSensitive) ) { ui->switchNvidia->setEnabled(false); ui->switchNvidia->setToolTip("nvidia driver already in use"); }
+        if( driver.contains("intel2", Qt::CaseSensitive) )      { ui->switchIntel2->setEnabled(false); ui->switchIntel2->setToolTip("intel2 driver already in use"); ui->nvidiasettings_but->setEnabled(false); }
+        else if( driver.contains("intel", Qt::CaseSensitive) )  { ui->switchIntel->setEnabled(false); ui->switchIntel->setToolTip("intel driver already in use"); ui->nvidiasettings_but->setEnabled(false); }
+        else if( driver.contains("nvidia", Qt::CaseSensitive) ) { ui->switchNvidia->setEnabled(false); ui->switchNvidia->setToolTip("nvidia driver already in use"); ui->nvidiasettings_but->setEnabled(true); }
     } else {
         ui->driverStatus->setText("<font color=\"red\">NOT SET</font>");
     }
@@ -187,6 +188,7 @@ MainWindow::MainWindow(QWidget *parent) :
     ui->nextboot_widget->setToolTip("Select card only for next boot, default card setting will not change");
     ui->service_widget->setToolTip("Manage the service. Remember SUSEPrime needs service enabled to correctly work");
     ui->unsetButton->setToolTip("Disable service and reset configuration of SUSEPrime");
+    ui->nvidiasettings_but->setToolTip("Open nvidia-settings panel");
     //refresh_and_set_tab
     MainWindow::refresh();
     ui->tabWidget->setCurrentIndex(0);
@@ -322,4 +324,10 @@ void MainWindow::on_logcleaner_but_clicked()
     if(output.isEmpty()) output = log_cleaner->readAllStandardError();
     ui->commandout->append(output);
     MainWindow::refresh();
+}
+
+void MainWindow::on_nvidiasettings_but_clicked()
+{
+    QProcess* nvidia_settings_proc = new QProcess();
+    nvidia_settings_proc->start("nvidia-settings");
 }

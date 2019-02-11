@@ -39,6 +39,8 @@ private slots:
 
     void on_logcleaner_but_clicked();
 
+    void on_nvidiasettings_but_clicked();
+
 private:
     Ui::MainWindow *ui;
     void refresh();

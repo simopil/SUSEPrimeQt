@@ -278,7 +278,7 @@
            <property name="geometry">
             <rect>
              <x>-10</x>
-             <y>50</y>
+             <y>40</y>
              <width>140</width>
              <height>30</height>
             </rect>
@@ -324,6 +324,19 @@
             <set>Qt::AlignCenter</set>
            </property>
           </widget>
+          <widget class="QPushButton" name="nvidiasettings_but">
+           <property name="geometry">
+            <rect>
+             <x>17</x>
+             <y>85</y>
+             <width>88</width>
+             <height>34</height>
+            </rect>
+           </property>
+           <property name="text">
+            <string>Settings</string>
+           </property>
+          </widget>
          </widget>
         </item>
         <item row="0" column="2">
@@ -352,10 +365,10 @@
            </property>
            <property name="geometry">
             <rect>
-             <x>32</x>
-             <y>50</y>
-             <width>50</width>
-             <height>30</height>
+             <x>30</x>
+             <y>35</y>
+             <width>60</width>
+             <height>40</height>
             </rect>
            </property>
            <property name="sizePolicy">
@@ -366,20 +379,20 @@
            </property>
            <property name="minimumSize">
             <size>
-             <width>50</width>
-             <height>30</height>
+             <width>60</width>
+             <height>40</height>
             </size>
            </property>
            <property name="maximumSize">
             <size>
-             <width>50</width>
-             <height>30</height>
+             <width>60</width>
+             <height>40</height>
             </size>
            </property>
            <property name="font">
             <font>
              <family>Droid Sans Japanese</family>
-             <pointsize>20</pointsize>
+             <pointsize>25</pointsize>
              <weight>75</weight>
              <italic>false</italic>
              <bold>true</bold>
@@ -402,8 +415,8 @@
           <widget class="QLabel" name="bbs_label">
            <property name="geometry">
             <rect>
-             <x>23</x>
-             <y>92</y>
+             <x>25</x>
+             <y>90</y>
              <width>71</width>
              <height>16</height>
             </rect>

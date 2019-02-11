@@ -13,6 +13,9 @@
   <property name="windowTitle">
    <string>Info</string>
   </property>
+  <property name="locale">
+   <locale language="English" country="UnitedStates"/>
+  </property>
   <widget class="QLabel" name="label">
    <property name="geometry">
     <rect>
@@ -34,7 +37,7 @@
     <string>Please logout to switch graphics</string>
    </property>
   </widget>
-  <widget class="QPushButton" name="pushButton">
+  <widget class="QPushButton" name="logout_but">
    <property name="geometry">
     <rect>
      <x>70</x>
@@ -50,7 +53,7 @@
     <string>OK</string>
    </property>
   </widget>
-  <widget class="QPushButton" name="pushButton_2">
+  <widget class="QPushButton" name="logout_abort_but">
    <property name="geometry">
     <rect>
      <x>270</x>

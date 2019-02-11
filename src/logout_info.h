@@ -16,9 +16,10 @@ public:
     ~logout_info();
 
 private slots:
-    void on_pushButton_clicked();
 
-    void on_pushButton_2_clicked();
+    void on_logout_abort_but_clicked();
+
+    void on_logout_but_clicked();
 
 private:
     Ui::logout_info *ui;
