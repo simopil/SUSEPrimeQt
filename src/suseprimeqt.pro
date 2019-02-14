@@ -28,17 +28,20 @@ SOURCES += \
     main.cpp \
     mainwindow.cpp \
     logout_info.cpp \
-    notinst_error.cpp
+    notinst_error.cpp \
+    about.cpp
 
 HEADERS += \
         mainwindow.h \
     logout_info.h \
-    notinst_error.h
+    notinst_error.h \
+    about.h
 
 FORMS += \
-        mainwindow.ui \
     logout_info.ui \
-    notinst_error.ui
+    notinst_error.ui \
+    mainwindow.ui \
+    about.ui
 
 # Default rules for deployment.
 qnx: target.path = /tmp/$${TARGET}/bin

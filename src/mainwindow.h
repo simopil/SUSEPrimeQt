@@ -41,6 +41,8 @@ private slots:
 
     void on_nvidiasettings_but_clicked();
 
+    void on_about_but_clicked();
+
 private:
     Ui::MainWindow *ui;
     void refresh();

@@ -1,15 +1,13 @@
 ﻿#include "mainwindow.h"
 #include "ui_mainwindow.h"
 #include "logout_info.h"
+#include "about.h"
 #include <QFile>
 #include <QString>
 #include <QTextStream>
 #include <QProcess>
 #include <QFileInfo>
 #include <QProcess>
-
-static QString SUSEPrimeqt_versionstring = "SUSEPrimeQt  0.6.1";
-static QString SUSEPrime_versionstring = "- Provides a simple GUI for SUSEPrime 0.6. Needs suse-prime >= 0.6";
 
 static bool intel2_exist = true;
 static bool bbswitch_exists = true;
@@ -149,13 +147,6 @@ MainWindow::MainWindow(QWidget *parent) :
     ui->setupUi(this);
     ui->commandout->append("Command line output:");
     ui->commandout->append("");
-    QProcess get_usage;
-    get_usage.start("prime-select");
-    get_usage.waitForFinished(-1);
-    QString output = get_usage.readAllStandardOutput();
-    ui->info_usagebox->setText(output);
-    ui->ver_lab_str->setText(SUSEPrimeqt_versionstring);
-    ui->label_versiondesc->setText(SUSEPrime_versionstring);
     //xf86-video-intel_check
     QProcess intel2_check;
     intel2_check.start("rpm -qi xf86-video-intel");
@@ -181,6 +172,7 @@ MainWindow::MainWindow(QWidget *parent) :
         ui->bbswitchStatus->deleteLater();
         ui->bbs_label->deleteLater();
         ui->bbswitch_widget->setToolTip("Nvidia card will never powered off. This may cause overheating and low battery life. To have this feature, please install bbswitch package");
+        ui->commandout->append("<font color=\"red\">WARNING: BBSWITCH IS NOT INSTALLED</font>");
         bbswitch_exists = false;
     } else ui->bbswitch_notinst_label->deleteLater();
     //tooltips
@@ -189,6 +181,7 @@ MainWindow::MainWindow(QWidget *parent) :
     ui->service_widget->setToolTip("Manage the service. Remember SUSEPrime needs service enabled to correctly work");
     ui->unsetButton->setToolTip("Disable service and reset configuration of SUSEPrime");
     ui->nvidiasettings_but->setToolTip("Open nvidia-settings panel");
+    ui->about_but->setToolTip("About and Informations");
     //refresh_and_set_tab
     MainWindow::refresh();
     ui->tabWidget->setCurrentIndex(0);
@@ -213,6 +206,7 @@ void MainWindow::on_switchNvidia_clicked()
     QString output = logout_waiter->readAllStandardOutput();
     if(output.isEmpty()) output = logout_waiter->readAllStandardError();
     ui->commandout->append(output);
+    MainWindow::refresh();
     logout_info dialog;
     dialog.setModal(true);
     dialog.exec();
@@ -226,6 +220,7 @@ void MainWindow::on_switchIntel_clicked()
     QString output = logout_waiter->readAllStandardOutput();
     if(output.isEmpty()) output = logout_waiter->readAllStandardError();
     ui->commandout->append(output);
+    MainWindow::refresh();
     logout_info dialog;
     dialog.setModal(true);
     dialog.exec();
@@ -239,6 +234,7 @@ void MainWindow::on_switchIntel2_clicked()
     QString output = logout_waiter->readAllStandardOutput();
     if(output.isEmpty()) output = logout_waiter->readAllStandardError();
     ui->commandout->append(output);
+    MainWindow::refresh();
     logout_info dialog;
     dialog.setModal(true);
     dialog.exec();
@@ -330,4 +326,11 @@ void MainWindow::on_nvidiasettings_but_clicked()
 {
     QProcess* nvidia_settings_proc = new QProcess();
     nvidia_settings_proc->start("nvidia-settings");
+}
+
+void MainWindow::on_about_but_clicked()
+{
+    about dialog;
+    dialog.setModal(false);
+    dialog.exec();
 }

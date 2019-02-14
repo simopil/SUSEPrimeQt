@@ -1,5 +1,6 @@
 <RCC>
     <qresource prefix="/icon">
         <file>icon/nvidia.png</file>
+        <file>icon/info.png</file>
     </qresource>
 </RCC>

@@ -19,7 +19,6 @@ SUSEPrimeQt could work without root only for user-available features of SUSEPrim
 
 ## SCREENSHOTS:
 ![Alt text](/Screenshots/screen1.jpeg?raw=true)
-![Alt text](/Screenshots/screen2.jpeg?raw=true)
 ![Alt text](/Screenshots/about.jpeg?raw=true)
 
 ## CREDITS:
