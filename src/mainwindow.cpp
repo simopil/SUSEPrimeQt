@@ -8,7 +8,6 @@
 #include <QProcess>
 #include <QFileInfo>
 #include <QProcess>
-#include <QTranslator>
 
 static bool intel2_exist = true;
 static bool bbswitch_exists = true;

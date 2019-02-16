@@ -25,11 +25,6 @@
         <translation></translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="237"/>
-        <source>INTEL&amp;2 </source>
-        <translation></translation>
-    </message>
-    <message>
         <location filename="../mainwindow.ui" line="280"/>
         <source>&amp;LAST</source>
         <translation>&amp;Ultima utilizzata</translation>
@@ -70,6 +65,11 @@
     <message>
         <location filename="../mainwindow.ui" line="396"/>
         <source>Current: Not Set</source>
+        <translation></translation>
+    </message>
+    <message>
+        <location filename="../mainwindow.ui" line="237"/>
+        <source>INTEL 2 </source>
         <translation></translation>
     </message>
     <message>
@@ -246,7 +246,7 @@
     <message>
         <location filename="../mainwindow.cpp" line="190"/>
         <source>Select card only for next boot, default card setting will not change</source>
-        <translation>Selezione la scheda da utilizzare solamente al prossimo boot: la preferenza al boot rimarrà invariata</translation>
+        <translation>Seleziona la scheda da utilizzare solamente al prossimo boot: la preferenza al boot rimarrà invariata</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="191"/>
