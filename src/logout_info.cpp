@@ -7,6 +7,7 @@ logout_info::logout_info(QWidget *parent) :
     ui(new Ui::logout_info)
 {
     ui->setupUi(this);
+    ui->retranslateUi(this);
 }
 
 logout_info::~logout_info()

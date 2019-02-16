@@ -6,6 +6,7 @@ notinst_error::notinst_error(QWidget *parent) :
     ui(new Ui::notinst_error)
 {
     ui->setupUi(this);
+    ui->retranslateUi(this);
 }
 
 notinst_error::~notinst_error()

@@ -46,6 +46,18 @@
        <verstretch>0</verstretch>
       </sizepolicy>
      </property>
+     <property name="minimumSize">
+      <size>
+       <width>105</width>
+       <height>34</height>
+      </size>
+     </property>
+     <property name="maximumSize">
+      <size>
+       <width>105</width>
+       <height>34</height>
+      </size>
+     </property>
      <property name="locale">
       <locale language="English" country="UnitedStates"/>
      </property>

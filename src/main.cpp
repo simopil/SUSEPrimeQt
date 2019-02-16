@@ -2,11 +2,21 @@
 #include "notinst_error.h"
 #include <QApplication>
 #include <QProcess>
+#include <QTranslator>
+#include <QLocale>
+#include <QLibraryInfo>
 
 int main(int argc, char *argv[])
 {
+
     QApplication a(argc, argv);
+    //translations
+    QString translation = QString(":/lang/%1/%1.qm").arg(QLocale::system().name());
+    QTranslator translator;
+    bool transl_exists = translator.load(translation);
+    if(transl_exists) a.installTranslator(&translator);
     MainWindow w;
+    //SUSEPrime_check
     QProcess get_usage;
     get_usage.start("prime-select");
     get_usage.waitForFinished(-1);

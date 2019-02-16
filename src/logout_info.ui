@@ -19,9 +19,9 @@
   <widget class="QLabel" name="label">
    <property name="geometry">
     <rect>
-     <x>20</x>
+     <x>10</x>
      <y>10</y>
-     <width>421</width>
+     <width>431</width>
      <height>101</height>
     </rect>
    </property>
@@ -36,13 +36,19 @@
    <property name="text">
     <string>Please logout to switch graphics</string>
    </property>
+   <property name="alignment">
+    <set>Qt::AlignCenter</set>
+   </property>
+   <property name="wordWrap">
+    <bool>true</bool>
+   </property>
   </widget>
   <widget class="QPushButton" name="logout_but">
    <property name="geometry">
     <rect>
      <x>70</x>
      <y>120</y>
-     <width>88</width>
+     <width>105</width>
      <height>34</height>
     </rect>
    </property>
@@ -58,7 +64,7 @@
     <rect>
      <x>270</x>
      <y>120</y>
-     <width>88</width>
+     <width>105</width>
      <height>34</height>
     </rect>
    </property>

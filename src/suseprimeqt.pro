@@ -11,6 +11,9 @@ greaterThan(QT_MAJOR_VERSION, 4): QT += widgets
 TARGET = suseprimeqt
 TEMPLATE = app
 
+TRANSLATIONS+= \
+    lang_ts/it_IT.ts
+
 # The following define makes your compiler emit warnings if you use
 # any feature of Qt which has been marked as deprecated (the exact warnings
 # depend on your compiler). Please consult the documentation of the
@@ -32,10 +35,10 @@ SOURCES += \
     about.cpp
 
 HEADERS += \
-        mainwindow.h \
+    mainwindow.h \
     logout_info.h \
     notinst_error.h \
-    about.h
+    about.h \
 
 FORMS += \
     logout_info.ui \
@@ -49,4 +52,7 @@ else: unix:!android: target.path = /opt/$${TARGET}/bin
 !isEmpty(target.path): INSTALLS += target
 
 RESOURCES += \
-    icon.qrc
+    icon.qrc \
+    translations.qrc
+
+

@@ -8,6 +8,7 @@
 #include <QProcess>
 #include <QFileInfo>
 #include <QProcess>
+#include <QTranslator>
 
 static bool intel2_exist = true;
 static bool bbswitch_exists = true;
@@ -39,7 +40,7 @@ void MainWindow::refresh()
         ui->logViewer->moveCursor(QTextCursor::End);
         ui->logcleaner_but->setEnabled(true);
     } else {
-        ui->logViewer->setText("logfile /var/log/prime-select.log NOT exist! Probably cleaned by user");
+        ui->logViewer->setText(tr("logfile /var/log/prime-select.log NOT exist! Probably cleaned by user"));
         ui->logcleaner_but->setEnabled(false);
     }
     //bbswitch
@@ -70,11 +71,11 @@ void MainWindow::refresh()
         driver = current_drvstream.readAll();
         ui->driverStatus->setText(driver);
         QString currmsg = "driver already in use";
-        if( driver.contains("intel2", Qt::CaseSensitive) )      { ui->switchIntel2->setEnabled(false); ui->switchIntel2->setToolTip("intel2 driver already in use"); ui->nvidiasettings_but->setEnabled(false); }
-        else if( driver.contains("intel", Qt::CaseSensitive) )  { ui->switchIntel->setEnabled(false); ui->switchIntel->setToolTip("intel driver already in use"); ui->nvidiasettings_but->setEnabled(false); }
-        else if( driver.contains("nvidia", Qt::CaseSensitive) ) { ui->switchNvidia->setEnabled(false); ui->switchNvidia->setToolTip("nvidia driver already in use"); ui->nvidiasettings_but->setEnabled(true); }
+        if( driver.contains("intel2", Qt::CaseSensitive) )      { ui->switchIntel2->setEnabled(false); ui->switchIntel2->setToolTip(tr("intel2 driver already in use")); ui->nvidiasettings_but->setEnabled(false); }
+        else if( driver.contains("intel", Qt::CaseSensitive) )  { ui->switchIntel->setEnabled(false); ui->switchIntel->setToolTip(tr("intel driver already in use")); ui->nvidiasettings_but->setEnabled(false); }
+        else if( driver.contains("nvidia", Qt::CaseSensitive) ) { ui->switchNvidia->setEnabled(false); ui->switchNvidia->setToolTip(tr("nvidia driver already in use")); ui->nvidiasettings_but->setEnabled(true); }
     } else {
-        ui->driverStatus->setText("<font color=\"red\">NOT SET</font>");
+        ui->driverStatus->setText(tr("<font color=\"red\">NOT SET</font>"));
     }
     //boot-default
     if (fileExists("/etc/prime/boot")) {
@@ -122,20 +123,20 @@ void MainWindow::refresh()
         frcboot.open(QIODevice::ReadOnly);
         QTextStream bootfrcstream(&frcboot);
         QString frcdrv = bootfrcstream.readAll();
-        if (frcdrv.contains("intel2", Qt::CaseSensitive))  { ui->force_boot_stat->setText("<font color=\"red\">Current: INTEL2</font>"); }
-        else if (frcdrv.contains("intel", Qt::CaseSensitive))        { ui->force_boot_stat->setText("<font color=\"red\">Current: INTEL</font>");}
-        else if (frcdrv.contains("nvidia", Qt::CaseSensitive))  { ui->force_boot_stat->setText("<font color=\"red\">Current: NVIDIA</font>"); }
+        if (frcdrv.contains("intel2", Qt::CaseSensitive))  { ui->force_boot_stat->setText(tr("<font color=\"red\">Current: INTEL2</font>")); }
+        else if (frcdrv.contains("intel", Qt::CaseSensitive))        { ui->force_boot_stat->setText(tr("<font color=\"red\">Current: INTEL</font>"));}
+        else if (frcdrv.contains("nvidia", Qt::CaseSensitive))  { ui->force_boot_stat->setText(tr("<font color=\"red\">Current: NVIDIA</font>")); }
         ui->restore_nextboot->setEnabled(true);
     }else{
-        ui->force_boot_stat->setText("<font color=\"black\">Current: NOT SET</font>");
+        ui->force_boot_stat->setText(tr("<font color=\"black\">Current: NOT SET</font>"));
         ui->restore_nextboot->setEnabled(false);
     }
     //service_status
     if (fileExists("/etc/systemd/system/multi-user.target.wants/prime-boot-selector.service")) {
-        ui->serv_stat->setText("<font color=\"green\">ENABLED</font>");
+        ui->serv_stat->setText(tr("<font color=\"green\">ENABLED</font>"));
         ui->serviceDisable->setEnabled(true);
     } else {
-        ui->serv_stat->setText("<font color=\"red\">DISABLED</font>");
+        ui->serv_stat->setText(tr("<font color=\"red\">DISABLED</font>"));
         ui->serviceDisable->setEnabled(false);
     }
 }
@@ -145,7 +146,7 @@ MainWindow::MainWindow(QWidget *parent) :
     ui(new Ui::MainWindow)
 {
     ui->setupUi(this);
-    ui->commandout->append("Command line output:");
+    ui->commandout->append(tr("Command line output:"));
     ui->commandout->append("");
     //xf86-video-intel_check
     QProcess intel2_check;
@@ -155,9 +156,9 @@ MainWindow::MainWindow(QWidget *parent) :
     if(!intel2_check_string.contains("Name"))
     {
         ui->switchIntel2->setEnabled(false);
-        ui->switchIntel2->setToolTip("package xf86-video-intel is not installed");
+        ui->switchIntel2->setToolTip(tr("package xf86-video-intel is not installed"));
         ui->radiointel2->setEnabled(false);
-        ui->radiointel2->setToolTip("package xf86-video-intel is not installed");
+        ui->radiointel2->setToolTip(tr("package xf86-video-intel is not installed"));
         ui->combo_forceboot->removeItem(1);
         intel2_exist = false;
     }
@@ -171,17 +172,26 @@ MainWindow::MainWindow(QWidget *parent) :
         ui->bbswitch_widget->setEnabled(false);
         ui->bbswitchStatus->deleteLater();
         ui->bbs_label->deleteLater();
-        ui->bbswitch_widget->setToolTip("Nvidia card will never powered off. This may cause overheating and low battery life. To have this feature, please install bbswitch package");
-        ui->commandout->append("<font color=\"red\">WARNING: BBSWITCH IS NOT INSTALLED</font>");
+        ui->bbswitch_widget->setToolTip(tr("Nvidia card will never powered off. This may cause overheating and low battery life. To have this feature, please install bbswitch package"));
+        ui->commandout->append(tr("<font color=\"red\">WARNING: BBSWITCH IS NOT INSTALLED</font>"));
+        //create label
+        QLabel *bb_err = new QLabel(this);
+        bb_err->setSizePolicy(QSizePolicy::Expanding , QSizePolicy::Expanding);
+        bb_err->setText(tr("BBSWITCH IS NOT INSTALLED"));
+        bb_err->setWordWrap(true);
+        bb_err->setAlignment(Qt::AlignCenter);
+        bb_err->setStyleSheet("font-size: 15px;");
+        bb_err->setScaledContents(false);
+        ui->bbswitch_widget->layout()->addWidget(bb_err);
         bbswitch_exists = false;
-    } else ui->bbswitch_notinst_label->deleteLater();
+    }
     //tooltips
-    ui->bootdef_widget->setToolTip("Set the default card at boot or remember last used");
-    ui->nextboot_widget->setToolTip("Select card only for next boot, default card setting will not change");
-    ui->service_widget->setToolTip("Manage the service. Remember SUSEPrime needs service enabled to correctly work");
-    ui->unsetButton->setToolTip("Disable service and reset configuration of SUSEPrime");
-    ui->nvidiasettings_but->setToolTip("Open nvidia-settings panel");
-    ui->about_but->setToolTip("About and Informations");
+    ui->bootdef_widget->setToolTip(tr("Set the default card at boot or remember last used"));
+    ui->nextboot_widget->setToolTip(tr("Select card only for next boot, default card setting will not change"));
+    ui->service_widget->setToolTip(tr("Manage the service. Remember SUSEPrime needs service enabled to correctly work"));
+    ui->unsetButton->setToolTip(tr("Disable service and reset configuration of SUSEPrime"));
+    ui->nvidiasettings_but->setToolTip(tr("Open nvidia-settings panel"));
+    ui->about_but->setToolTip(tr("About and Informations"));
     //refresh_and_set_tab
     MainWindow::refresh();
     ui->tabWidget->setCurrentIndex(0);
