@@ -698,7 +698,7 @@
     <item row="0" column="2">
      <widget class="QGroupBox" name="bbswitch_widget">
       <property name="sizePolicy">
-       <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
+       <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
         <horstretch>0</horstretch>
         <verstretch>0</verstretch>
        </sizepolicy>
@@ -728,7 +728,7 @@
        <string>Nvidia card is</string>
       </property>
       <layout class="QGridLayout" name="gridLayout_7">
-       <item row="0" column="0">
+       <item row="0" column="0" alignment="Qt::AlignHCenter">
         <widget class="QLabel" name="bbswitchStatus">
          <property name="enabled">
           <bool>true</bool>
@@ -741,13 +741,13 @@
          </property>
          <property name="minimumSize">
           <size>
-           <width>105</width>
+           <width>100</width>
            <height>45</height>
           </size>
          </property>
          <property name="maximumSize">
           <size>
-           <width>105</width>
+           <width>100</width>
            <height>45</height>
           </size>
          </property>
@@ -784,7 +784,7 @@
          </property>
         </widget>
        </item>
-       <item row="1" column="0">
+       <item row="1" column="0" alignment="Qt::AlignHCenter">
         <widget class="QLabel" name="bbs_label">
          <property name="sizePolicy">
           <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
@@ -869,13 +869,13 @@
          </property>
          <property name="minimumSize">
           <size>
-           <width>110</width>
+           <width>90</width>
            <height>30</height>
           </size>
          </property>
          <property name="maximumSize">
           <size>
-           <width>110</width>
+           <width>90</width>
            <height>30</height>
           </size>
          </property>
@@ -967,7 +967,7 @@
        <locale language="English" country="UnitedStates"/>
       </property>
       <property name="currentIndex">
-       <number>0</number>
+       <number>1</number>
       </property>
       <widget class="QWidget" name="commandout_tab">
        <attribute name="title">
@@ -1025,6 +1025,9 @@
             <width>105</width>
             <height>34</height>
            </size>
+          </property>
+          <property name="focusPolicy">
+           <enum>Qt::NoFocus</enum>
           </property>
           <property name="accessibleName">
            <string/>
