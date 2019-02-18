@@ -10,7 +10,7 @@
     <x>0</x>
     <y>0</y>
     <width>734</width>
-    <height>440</height>
+    <height>436</height>
    </rect>
   </property>
   <property name="sizePolicy">
@@ -21,8 +21,8 @@
   </property>
   <property name="minimumSize">
    <size>
-    <width>490</width>
-    <height>440</height>
+    <width>478</width>
+    <height>436</height>
    </size>
   </property>
   <property name="maximumSize">
@@ -32,20 +32,32 @@
    </size>
   </property>
   <property name="windowTitle">
-   <string>SUSEPrimeQt</string>
+   <string notr="true">SUSEPrimeQt</string>
   </property>
   <property name="windowIcon">
    <iconset resource="icon.qrc">
     <normaloff>:/icon/icon/nvidia.png</normaloff>:/icon/icon/nvidia.png</iconset>
   </property>
+  <property name="toolTip">
+   <string notr="true"/>
+  </property>
+  <property name="statusTip">
+   <string notr="true"/>
+  </property>
+  <property name="whatsThis">
+   <string notr="true"/>
+  </property>
   <property name="accessibleName">
-   <string/>
+   <string notr="true"/>
   </property>
   <property name="accessibleDescription">
-   <string/>
+   <string notr="true"/>
   </property>
   <property name="layoutDirection">
    <enum>Qt::LeftToRight</enum>
+  </property>
+  <property name="locale">
+   <locale language="English" country="UnitedStates"/>
   </property>
   <widget class="QWidget" name="centralWidget">
    <property name="sizePolicy">
@@ -57,7 +69,7 @@
    <property name="minimumSize">
     <size>
      <width>660</width>
-     <height>440</height>
+     <height>434</height>
     </size>
    </property>
    <property name="maximumSize">
@@ -66,17 +78,44 @@
      <height>99999</height>
     </size>
    </property>
+   <property name="toolTip">
+    <string notr="true"/>
+   </property>
+   <property name="statusTip">
+    <string notr="true"/>
+   </property>
+   <property name="whatsThis">
+    <string notr="true"/>
+   </property>
    <property name="accessibleName">
-    <string/>
+    <string notr="true"/>
    </property>
    <property name="accessibleDescription">
-    <string/>
+    <string notr="true"/>
    </property>
    <layout class="QGridLayout" name="gridLayout">
+    <property name="sizeConstraint">
+     <enum>QLayout::SetDefaultConstraint</enum>
+    </property>
+    <property name="leftMargin">
+     <number>1</number>
+    </property>
+    <property name="topMargin">
+     <number>4</number>
+    </property>
+    <property name="rightMargin">
+     <number>1</number>
+    </property>
+    <property name="bottomMargin">
+     <number>1</number>
+    </property>
+    <property name="spacing">
+     <number>3</number>
+    </property>
     <item row="1" column="0">
      <widget class="QGroupBox" name="bootdef_widget">
       <property name="sizePolicy">
-       <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
+       <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
         <horstretch>0</horstretch>
         <verstretch>0</verstretch>
        </sizepolicy>
@@ -181,6 +220,15 @@
        <property name="focusPolicy">
         <enum>Qt::NoFocus</enum>
        </property>
+       <property name="toolTip">
+        <string notr="true"/>
+       </property>
+       <property name="statusTip">
+        <string notr="true"/>
+       </property>
+       <property name="whatsThis">
+        <string notr="true"/>
+       </property>
        <property name="accessibleName">
         <string notr="true"/>
        </property>
@@ -191,7 +239,10 @@
         <locale language="English" country="UnitedStates"/>
        </property>
        <property name="text">
-        <string>N&amp;VIDIA</string>
+        <string notr="true">N&amp;VIDIA</string>
+       </property>
+       <property name="shortcut">
+        <string notr="true"/>
        </property>
       </widget>
       <widget class="QRadioButton" name="radiointel2">
@@ -224,6 +275,15 @@
        <property name="focusPolicy">
         <enum>Qt::NoFocus</enum>
        </property>
+       <property name="toolTip">
+        <string notr="true"/>
+       </property>
+       <property name="statusTip">
+        <string notr="true"/>
+       </property>
+       <property name="whatsThis">
+        <string notr="true"/>
+       </property>
        <property name="accessibleName">
         <string notr="true"/>
        </property>
@@ -234,7 +294,10 @@
         <locale language="English" country="UnitedStates"/>
        </property>
        <property name="text">
-        <string>INTEL 2 </string>
+        <string notr="true">INTEL 2 </string>
+       </property>
+       <property name="shortcut">
+        <string notr="true"/>
        </property>
       </widget>
       <widget class="QRadioButton" name="radiolast">
@@ -310,6 +373,15 @@
        <property name="focusPolicy">
         <enum>Qt::NoFocus</enum>
        </property>
+       <property name="toolTip">
+        <string notr="true"/>
+       </property>
+       <property name="statusTip">
+        <string notr="true"/>
+       </property>
+       <property name="whatsThis">
+        <string notr="true"/>
+       </property>
        <property name="accessibleName">
         <string notr="true"/>
        </property>
@@ -320,7 +392,10 @@
         <locale language="English" country="UnitedStates"/>
        </property>
        <property name="text">
-        <string>&amp;INTEL</string>
+        <string notr="true">&amp;INTEL</string>
+       </property>
+       <property name="shortcut">
+        <string notr="true"/>
        </property>
       </widget>
      </widget>
@@ -328,7 +403,7 @@
     <item row="1" column="1" colspan="2">
      <widget class="QGroupBox" name="nextboot_widget">
       <property name="sizePolicy">
-       <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
+       <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
         <horstretch>0</horstretch>
         <verstretch>0</verstretch>
        </sizepolicy>
@@ -383,6 +458,15 @@
            <pointsize>12</pointsize>
           </font>
          </property>
+         <property name="toolTip">
+          <string notr="true"/>
+         </property>
+         <property name="statusTip">
+          <string notr="true"/>
+         </property>
+         <property name="whatsThis">
+          <string notr="true"/>
+         </property>
          <property name="accessibleName">
           <string notr="true"/>
          </property>
@@ -393,7 +477,7 @@
           <locale language="English" country="UnitedStates"/>
          </property>
          <property name="text">
-          <string>Current: Not Set</string>
+          <string notr="true">Current: Not Set</string>
          </property>
          <property name="alignment">
           <set>Qt::AlignCenter</set>
@@ -497,6 +581,15 @@
          <property name="focusPolicy">
           <enum>Qt::NoFocus</enum>
          </property>
+         <property name="toolTip">
+          <string notr="true"/>
+         </property>
+         <property name="statusTip">
+          <string notr="true"/>
+         </property>
+         <property name="whatsThis">
+          <string notr="true"/>
+         </property>
          <property name="accessibleName">
           <string notr="true"/>
          </property>
@@ -508,191 +601,22 @@
          </property>
          <item>
           <property name="text">
-           <string>INTEL</string>
+           <string notr="true">INTEL</string>
           </property>
          </item>
          <item>
           <property name="text">
-           <string>INTEL2 [Opensource driver]</string>
+           <string notr="true">INTEL2 [Opensource driver]</string>
           </property>
          </item>
          <item>
           <property name="text">
-           <string>NVIDIA</string>
+           <string notr="true">NVIDIA</string>
           </property>
          </item>
         </widget>
        </item>
       </layout>
-     </widget>
-    </item>
-    <item row="0" column="0">
-     <widget class="QGroupBox" name="switch_widget">
-      <property name="sizePolicy">
-       <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
-        <horstretch>0</horstretch>
-        <verstretch>0</verstretch>
-       </sizepolicy>
-      </property>
-      <property name="minimumSize">
-       <size>
-        <width>223</width>
-        <height>141</height>
-       </size>
-      </property>
-      <property name="maximumSize">
-       <size>
-        <width>223</width>
-        <height>141</height>
-       </size>
-      </property>
-      <property name="accessibleName">
-       <string/>
-      </property>
-      <property name="accessibleDescription">
-       <string/>
-      </property>
-      <property name="locale">
-       <locale language="English" country="UnitedStates"/>
-      </property>
-      <property name="title">
-       <string>Switch</string>
-      </property>
-      <widget class="QPushButton" name="switchIntel">
-       <property name="geometry">
-        <rect>
-         <x>20</x>
-         <y>40</y>
-         <width>84</width>
-         <height>32</height>
-        </rect>
-       </property>
-       <property name="sizePolicy">
-        <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
-         <horstretch>0</horstretch>
-         <verstretch>0</verstretch>
-        </sizepolicy>
-       </property>
-       <property name="minimumSize">
-        <size>
-         <width>84</width>
-         <height>32</height>
-        </size>
-       </property>
-       <property name="maximumSize">
-        <size>
-         <width>84</width>
-         <height>32</height>
-        </size>
-       </property>
-       <property name="focusPolicy">
-        <enum>Qt::NoFocus</enum>
-       </property>
-       <property name="accessibleName">
-        <string notr="true"/>
-       </property>
-       <property name="accessibleDescription">
-        <string notr="true"/>
-       </property>
-       <property name="locale">
-        <locale language="English" country="UnitedStates"/>
-       </property>
-       <property name="text">
-        <string>INTEL</string>
-       </property>
-      </widget>
-      <widget class="QPushButton" name="switchIntel2">
-       <property name="geometry">
-        <rect>
-         <x>20</x>
-         <y>80</y>
-         <width>84</width>
-         <height>32</height>
-        </rect>
-       </property>
-       <property name="sizePolicy">
-        <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
-         <horstretch>0</horstretch>
-         <verstretch>0</verstretch>
-        </sizepolicy>
-       </property>
-       <property name="minimumSize">
-        <size>
-         <width>84</width>
-         <height>32</height>
-        </size>
-       </property>
-       <property name="maximumSize">
-        <size>
-         <width>84</width>
-         <height>32</height>
-        </size>
-       </property>
-       <property name="focusPolicy">
-        <enum>Qt::NoFocus</enum>
-       </property>
-       <property name="accessibleName">
-        <string notr="true"/>
-       </property>
-       <property name="accessibleDescription">
-        <string notr="true"/>
-       </property>
-       <property name="layoutDirection">
-        <enum>Qt::LeftToRight</enum>
-       </property>
-       <property name="locale">
-        <locale language="English" country="UnitedStates"/>
-       </property>
-       <property name="text">
-        <string>INTEL 2</string>
-       </property>
-      </widget>
-      <widget class="QPushButton" name="switchNvidia">
-       <property name="geometry">
-        <rect>
-         <x>115</x>
-         <y>40</y>
-         <width>84</width>
-         <height>71</height>
-        </rect>
-       </property>
-       <property name="sizePolicy">
-        <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
-         <horstretch>0</horstretch>
-         <verstretch>0</verstretch>
-        </sizepolicy>
-       </property>
-       <property name="minimumSize">
-        <size>
-         <width>84</width>
-         <height>71</height>
-        </size>
-       </property>
-       <property name="maximumSize">
-        <size>
-         <width>84</width>
-         <height>71</height>
-        </size>
-       </property>
-       <property name="focusPolicy">
-        <enum>Qt::NoFocus</enum>
-       </property>
-       <property name="accessibleName">
-        <string notr="true"/>
-       </property>
-       <property name="accessibleDescription">
-        <string notr="true"/>
-       </property>
-       <property name="layoutDirection">
-        <enum>Qt::LeftToRight</enum>
-       </property>
-       <property name="locale">
-        <locale language="English" country="UnitedStates"/>
-       </property>
-       <property name="text">
-        <string>NVIDIA</string>
-       </property>
-      </widget>
      </widget>
     </item>
     <item row="0" column="2">
@@ -764,6 +688,15 @@
            <kerning>true</kerning>
           </font>
          </property>
+         <property name="toolTip">
+          <string notr="true"/>
+         </property>
+         <property name="statusTip">
+          <string notr="true"/>
+         </property>
+         <property name="whatsThis">
+          <string notr="true"/>
+         </property>
          <property name="accessibleName">
           <string notr="true"/>
          </property>
@@ -777,7 +710,7 @@
           <locale language="English" country="UnitedStates"/>
          </property>
          <property name="text">
-          <string>OFF</string>
+          <string notr="true">STAT</string>
          </property>
          <property name="alignment">
           <set>Qt::AlignCenter</set>
@@ -809,11 +742,26 @@
            <pointsize>9</pointsize>
           </font>
          </property>
+         <property name="toolTip">
+          <string notr="true"/>
+         </property>
+         <property name="statusTip">
+          <string notr="true"/>
+         </property>
+         <property name="whatsThis">
+          <string notr="true"/>
+         </property>
+         <property name="accessibleName">
+          <string notr="true"/>
+         </property>
+         <property name="accessibleDescription">
+          <string notr="true"/>
+         </property>
          <property name="locale">
           <locale language="English" country="UnitedStates"/>
          </property>
          <property name="text">
-          <string>[BBSWITCH]</string>
+          <string notr="true">[BBSWITCH]</string>
          </property>
          <property name="alignment">
           <set>Qt::AlignCenter</set>
@@ -826,7 +774,7 @@
     <item row="0" column="1">
      <widget class="QGroupBox" name="currentdriver_widget">
       <property name="sizePolicy">
-       <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
+       <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
         <horstretch>0</horstretch>
         <verstretch>0</verstretch>
        </sizepolicy>
@@ -892,6 +840,15 @@
            <kerning>true</kerning>
           </font>
          </property>
+         <property name="toolTip">
+          <string notr="true"/>
+         </property>
+         <property name="statusTip">
+          <string notr="true"/>
+         </property>
+         <property name="whatsThis">
+          <string notr="true"/>
+         </property>
          <property name="accessibleName">
           <string notr="true"/>
          </property>
@@ -902,7 +859,7 @@
           <locale language="English" country="UnitedStates"/>
          </property>
          <property name="text">
-          <string>driver</string>
+          <string notr="true">driver</string>
          </property>
          <property name="alignment">
           <set>Qt::AlignCenter</set>
@@ -967,7 +924,7 @@
        <locale language="English" country="UnitedStates"/>
       </property>
       <property name="currentIndex">
-       <number>1</number>
+       <number>0</number>
       </property>
       <widget class="QWidget" name="commandout_tab">
        <attribute name="title">
@@ -988,6 +945,15 @@
             <height>0</height>
            </size>
           </property>
+          <property name="toolTip">
+           <string notr="true"/>
+          </property>
+          <property name="statusTip">
+           <string notr="true"/>
+          </property>
+          <property name="whatsThis">
+           <string notr="true"/>
+          </property>
           <property name="accessibleName">
            <string notr="true"/>
           </property>
@@ -996,6 +962,9 @@
           </property>
           <property name="lineWrapMode">
            <enum>QTextEdit::NoWrap</enum>
+          </property>
+          <property name="searchPaths">
+           <stringlist notr="true"/>
           </property>
          </widget>
         </item>
@@ -1045,6 +1014,15 @@
         </item>
         <item row="0" column="0">
          <widget class="QTextBrowser" name="logViewer">
+          <property name="toolTip">
+           <string notr="true"/>
+          </property>
+          <property name="statusTip">
+           <string notr="true"/>
+          </property>
+          <property name="whatsThis">
+           <string notr="true"/>
+          </property>
           <property name="accessibleName">
            <string notr="true"/>
           </property>
@@ -1057,6 +1035,9 @@
           <property name="lineWrapMode">
            <enum>QTextEdit::NoWrap</enum>
           </property>
+          <property name="searchPaths">
+           <stringlist notr="true"/>
+          </property>
          </widget>
         </item>
        </layout>
@@ -1066,7 +1047,7 @@
     <item row="2" column="0">
      <widget class="QGroupBox" name="service_widget">
       <property name="sizePolicy">
-       <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
+       <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
         <horstretch>0</horstretch>
         <verstretch>0</verstretch>
        </sizepolicy>
@@ -1234,17 +1215,23 @@
            <bold>false</bold>
           </font>
          </property>
+         <property name="toolTip">
+          <string notr="true"/>
+         </property>
+         <property name="statusTip">
+          <string notr="true"/>
+         </property>
+         <property name="whatsThis">
+          <string notr="true"/>
+         </property>
          <property name="accessibleName">
           <string notr="true"/>
          </property>
          <property name="accessibleDescription">
           <string notr="true"/>
          </property>
-         <property name="locale">
-          <locale language="English" country="UnitedStates"/>
-         </property>
          <property name="text">
-          <string>DISABLED</string>
+          <string notr="true">STATUS</string>
          </property>
          <property name="alignment">
           <set>Qt::AlignCenter</set>
@@ -1257,7 +1244,7 @@
     <item row="2" column="1" colspan="2">
      <widget class="QGroupBox" name="advanced_widget">
       <property name="sizePolicy">
-       <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
+       <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
         <horstretch>0</horstretch>
         <verstretch>0</verstretch>
        </sizepolicy>
@@ -1333,9 +1320,9 @@
        <property name="geometry">
         <rect>
          <x>160</x>
-         <y>52</y>
-         <width>50</width>
-         <height>50</height>
+         <y>47</y>
+         <width>60</width>
+         <height>60</height>
         </rect>
        </property>
        <property name="sizePolicy">
@@ -1346,14 +1333,14 @@
        </property>
        <property name="minimumSize">
         <size>
-         <width>50</width>
-         <height>50</height>
+         <width>60</width>
+         <height>60</height>
         </size>
        </property>
        <property name="maximumSize">
         <size>
-         <width>50</width>
-         <height>50</height>
+         <width>60</width>
+         <height>60</height>
         </size>
        </property>
        <property name="focusPolicy">
@@ -1369,8 +1356,7 @@
         <bool>false</bool>
        </property>
        <property name="styleSheet">
-        <string notr="true">border-radius: 25px;
-background-color: black;</string>
+        <string notr="true"/>
        </property>
        <property name="locale">
         <locale language="English" country="UnitedStates"/>
@@ -1396,6 +1382,211 @@ background-color: black;</string>
        </property>
        <property name="flat">
         <bool>false</bool>
+       </property>
+      </widget>
+     </widget>
+    </item>
+    <item row="0" column="0">
+     <widget class="QGroupBox" name="switch_widget">
+      <property name="sizePolicy">
+       <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+        <horstretch>0</horstretch>
+        <verstretch>0</verstretch>
+       </sizepolicy>
+      </property>
+      <property name="minimumSize">
+       <size>
+        <width>223</width>
+        <height>141</height>
+       </size>
+      </property>
+      <property name="maximumSize">
+       <size>
+        <width>223</width>
+        <height>141</height>
+       </size>
+      </property>
+      <property name="accessibleName">
+       <string/>
+      </property>
+      <property name="accessibleDescription">
+       <string/>
+      </property>
+      <property name="locale">
+       <locale language="English" country="UnitedStates"/>
+      </property>
+      <property name="title">
+       <string>Switch</string>
+      </property>
+      <widget class="QPushButton" name="switchIntel">
+       <property name="geometry">
+        <rect>
+         <x>20</x>
+         <y>40</y>
+         <width>84</width>
+         <height>32</height>
+        </rect>
+       </property>
+       <property name="sizePolicy">
+        <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+         <horstretch>0</horstretch>
+         <verstretch>0</verstretch>
+        </sizepolicy>
+       </property>
+       <property name="minimumSize">
+        <size>
+         <width>84</width>
+         <height>32</height>
+        </size>
+       </property>
+       <property name="maximumSize">
+        <size>
+         <width>84</width>
+         <height>32</height>
+        </size>
+       </property>
+       <property name="focusPolicy">
+        <enum>Qt::NoFocus</enum>
+       </property>
+       <property name="toolTip">
+        <string notr="true"/>
+       </property>
+       <property name="statusTip">
+        <string notr="true"/>
+       </property>
+       <property name="whatsThis">
+        <string notr="true"/>
+       </property>
+       <property name="accessibleName">
+        <string notr="true"/>
+       </property>
+       <property name="accessibleDescription">
+        <string notr="true"/>
+       </property>
+       <property name="locale">
+        <locale language="English" country="UnitedStates"/>
+       </property>
+       <property name="text">
+        <string notr="true">INTEL</string>
+       </property>
+       <property name="shortcut">
+        <string notr="true"/>
+       </property>
+      </widget>
+      <widget class="QPushButton" name="switchIntel2">
+       <property name="geometry">
+        <rect>
+         <x>20</x>
+         <y>80</y>
+         <width>84</width>
+         <height>32</height>
+        </rect>
+       </property>
+       <property name="sizePolicy">
+        <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+         <horstretch>0</horstretch>
+         <verstretch>0</verstretch>
+        </sizepolicy>
+       </property>
+       <property name="minimumSize">
+        <size>
+         <width>84</width>
+         <height>32</height>
+        </size>
+       </property>
+       <property name="maximumSize">
+        <size>
+         <width>84</width>
+         <height>32</height>
+        </size>
+       </property>
+       <property name="focusPolicy">
+        <enum>Qt::NoFocus</enum>
+       </property>
+       <property name="toolTip">
+        <string notr="true"/>
+       </property>
+       <property name="statusTip">
+        <string notr="true"/>
+       </property>
+       <property name="whatsThis">
+        <string notr="true"/>
+       </property>
+       <property name="accessibleName">
+        <string notr="true"/>
+       </property>
+       <property name="accessibleDescription">
+        <string notr="true"/>
+       </property>
+       <property name="layoutDirection">
+        <enum>Qt::LeftToRight</enum>
+       </property>
+       <property name="locale">
+        <locale language="English" country="UnitedStates"/>
+       </property>
+       <property name="text">
+        <string notr="true">INTEL 2</string>
+       </property>
+       <property name="shortcut">
+        <string notr="true"/>
+       </property>
+      </widget>
+      <widget class="QPushButton" name="switchNvidia">
+       <property name="geometry">
+        <rect>
+         <x>115</x>
+         <y>40</y>
+         <width>84</width>
+         <height>71</height>
+        </rect>
+       </property>
+       <property name="sizePolicy">
+        <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+         <horstretch>0</horstretch>
+         <verstretch>0</verstretch>
+        </sizepolicy>
+       </property>
+       <property name="minimumSize">
+        <size>
+         <width>84</width>
+         <height>71</height>
+        </size>
+       </property>
+       <property name="maximumSize">
+        <size>
+         <width>84</width>
+         <height>71</height>
+        </size>
+       </property>
+       <property name="focusPolicy">
+        <enum>Qt::NoFocus</enum>
+       </property>
+       <property name="toolTip">
+        <string notr="true"/>
+       </property>
+       <property name="statusTip">
+        <string notr="true"/>
+       </property>
+       <property name="whatsThis">
+        <string notr="true"/>
+       </property>
+       <property name="accessibleName">
+        <string notr="true"/>
+       </property>
+       <property name="accessibleDescription">
+        <string notr="true"/>
+       </property>
+       <property name="layoutDirection">
+        <enum>Qt::LeftToRight</enum>
+       </property>
+       <property name="locale">
+        <locale language="English" country="UnitedStates"/>
+       </property>
+       <property name="text">
+        <string notr="true">NVIDIA</string>
+       </property>
+       <property name="shortcut">
+        <string notr="true"/>
        </property>
       </widget>
      </widget>
