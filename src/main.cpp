@@ -10,7 +10,7 @@ int main(int argc, char *argv[])
 
     QApplication a(argc, argv);
     //translations
-    QString translation = QString(":/lang/%1/%1.qm").arg(QLocale::system().name());
+    QString translation = QString(":/lang/%1.qm").arg(QLocale::system().name());
     QTranslator translator;
     bool transl_exists = translator.load(translation);
     if(transl_exists) a.installTranslator(&translator);

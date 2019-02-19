@@ -16,7 +16,7 @@ about::about(QWidget *parent) :
     ui->info_usagebox->setText(output);
     ui->ver_lab_str->setText("SUSEPrimeQt  0.6.4");
     ui->label_versiondesc->setText(tr("- Provides a simple GUI for SUSEPrime 0.6. Needs suse-prime >= 0.6"));
-    QString translation = QString(":/lang/%1/%1.qm").arg(QLocale::system().name());
+    QString translation = QString(":/lang/%1.qm").arg(QLocale::system().name());
     QTranslator translator;
     bool transl_exists = translator.load(translation);
     if(transl_exists == false) ui->transl_about->hide();

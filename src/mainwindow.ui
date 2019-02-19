@@ -477,7 +477,7 @@
           <locale language="English" country="UnitedStates"/>
          </property>
          <property name="text">
-          <string notr="true">Current: Not Set</string>
+          <string>Current: Not Set</string>
          </property>
          <property name="alignment">
           <set>Qt::AlignCenter</set>
@@ -924,7 +924,7 @@
        <locale language="English" country="UnitedStates"/>
       </property>
       <property name="currentIndex">
-       <number>0</number>
+       <number>1</number>
       </property>
       <widget class="QWidget" name="commandout_tab">
        <attribute name="title">
@@ -985,13 +985,13 @@
           </property>
           <property name="minimumSize">
            <size>
-            <width>105</width>
+            <width>120</width>
             <height>34</height>
            </size>
           </property>
           <property name="maximumSize">
            <size>
-            <width>105</width>
+            <width>120</width>
             <height>34</height>
            </size>
           </property>
@@ -1087,13 +1087,13 @@
          </property>
          <property name="minimumSize">
           <size>
-           <width>90</width>
+           <width>96</width>
            <height>34</height>
           </size>
          </property>
          <property name="maximumSize">
           <size>
-           <width>90</width>
+           <width>96</width>
            <height>34</height>
           </size>
          </property>
@@ -1124,13 +1124,13 @@
          </property>
          <property name="minimumSize">
           <size>
-           <width>90</width>
+           <width>96</width>
            <height>34</height>
           </size>
          </property>
          <property name="maximumSize">
           <size>
-           <width>90</width>
+           <width>96</width>
            <height>34</height>
           </size>
          </property>
@@ -1278,7 +1278,7 @@
         <rect>
          <x>15</x>
          <y>60</y>
-         <width>110</width>
+         <width>130</width>
          <height>34</height>
         </rect>
        </property>
@@ -1290,13 +1290,13 @@
        </property>
        <property name="minimumSize">
         <size>
-         <width>110</width>
+         <width>130</width>
          <height>34</height>
         </size>
        </property>
        <property name="maximumSize">
         <size>
-         <width>110</width>
+         <width>130</width>
          <height>34</height>
         </size>
        </property>
@@ -1319,7 +1319,7 @@
       <widget class="QPushButton" name="about_but">
        <property name="geometry">
         <rect>
-         <x>160</x>
+         <x>165</x>
          <y>47</y>
          <width>60</width>
          <height>60</height>
