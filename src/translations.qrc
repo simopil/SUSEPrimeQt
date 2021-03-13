@@ -2,5 +2,6 @@
     <qresource prefix="/">
         <file>lang/it_IT.qm</file>
         <file>lang/de_DE.qm</file>
+        <file>lang/tr_TR.qm</file>
     </qresource>
 </RCC>
